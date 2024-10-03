@@ -39,7 +39,7 @@ public interface BagInterface<T>
    /* empty the bag - set the number of elements to zero
     */
 
-   public int getFrequencyof(T anEntry);
+   public int getFrequencyOf(T anEntry);
    /* count how many times a given element appears in the bag
    @param (T) anEntry - the element to look for in the bag
    @return - (int) the number  of times that the given element appears

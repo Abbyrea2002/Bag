@@ -87,9 +87,9 @@ public final class ArrayBag<T> implements BagInterface<T>
    }
 
 
-   public int getFrequencyof(T anEntry){
+   public int getFrequencyOf(T anEntry){
       int count = 0 ;
-      for(int i; i < numberOfEntries; i++)
+      for(int i = 0; i < numberOfEntries; i++)
         if(bag[i].equals(anEntry)) count++;
       return count;
    }
@@ -107,6 +107,14 @@ public final class ArrayBag<T> implements BagInterface<T>
       T[] resultArray = (T[]) new Object[numberOfEntries];
       System.arraycopy(bag, 0, resultArray, 0, numberOfEntries );
       return resultArray;
+   }
+
+   public String toString(){
+      String strResult = "Bag[";
+      for(int i = 0; i < numberOfEntries; i++)
+         strResult += bag[i] + " ";
+      strResult += "]";
+      return strResult;
    }
 
    public static void main(String[] args){
