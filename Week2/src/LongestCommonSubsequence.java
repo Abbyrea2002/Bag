@@ -66,6 +66,9 @@ public class LongestCommonSubsequence {
 
                         // TODO (5): Generate new strings from test by removing each single character and
                         // TODO (5): place each new string in the bag. Add the new code into this 'if' block
+                        for(int i = 0; i < strTest.length(); i++) {
+                            newString =
+                        }
 
                     }
 
@@ -108,6 +111,10 @@ public class LongestCommonSubsequence {
         }
         return bResult;
     }
-
+    public static String subString(String str, int position){
+        String before = str.substring(0, position); // Characters before the position
+        String after = str.substring(position + 1); // Characters after the position
+        return before + after;
+    }
 
 }
