@@ -52,7 +52,6 @@ public class BagTest {
         testArrayBag.remove("A");
         testArrayBag.remove("B");
 
-
         /// Output the current status of the bag:
         bagStatusReport(testArrayBag);
         System.out.println("\n");
@@ -61,7 +60,8 @@ public class BagTest {
         System.out.println("Remove an unspecified entry from the bag");
 
         // TODO: Remove an unspecified entry from the bag:
-            testArrayBag.remove();
+        testArrayBag.remove();
+
 
         // Output the current status of the bag:
         bagStatusReport(testArrayBag);
