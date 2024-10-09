@@ -125,7 +125,7 @@ public final class LinkBag<T>
       int index = 0;
       MyNode<T> currentNode = firstnode;
       while(currentNode != null){
-         resultArray[index] = currentNode.getData();
+         resultArray[index++] = currentNode.getData();
          currentNode = currentNode.getNext();
       }
       return resultArray;
