@@ -117,6 +117,18 @@ public final class ArrayBag<T> implements BagInterface<T>
       return strResult;
    }
 
+   public void display(){
+      displayRecursively(0);
+   }
+
+   public void displayRecursively( int index){
+      if(index == numberOfEntries){
+         return;
+      }
+      System.out.println(bag[index]);
+      displayRecursively(index + 1);
+   }
+
    public static void main(String[] args){
       ArrayBag<String> bagOfNames = new ArrayBag<String>(5);
 
