@@ -1,3 +1,5 @@
+import org.w3c.dom.Node;
+
 /**
  * Created by abbyr on 08/10/2024
  * COMMENTS ABOUT PROGRAM HERE
@@ -129,6 +131,17 @@ public final class LinkBag<T>
          currentNode = currentNode.getNext();
       }
       return resultArray;
+   }
+
+   public void display(){
+      displayChain(firstnode);
+   }
+
+   public void displayChain(MyNode nodeOne){
+      if(nodeOne != null){
+         System.out.println(nodeOne.getData());
+         displayChain(nodeOne.getNext());
+      }
    }
 
    public String toString(){
