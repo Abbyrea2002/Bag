@@ -10,7 +10,7 @@ public class BagTest {
     public static void main(String[] args) {
 
         // Create an object of ArrayBag<String>
-        LinkBag<String> testArrayBag = new LinkBag<>();
+        ArrayBag<String> testArrayBag = new ArrayBag<>();
         System.out.println("------------------------------------------------------");
         System.out.println("BAG TEST:");
         System.out.println("Initial state of Bag:");
@@ -86,7 +86,7 @@ public class BagTest {
      * Method to output a report on the current contents and status of the bag.
      * @param myBag The bag being reported upon.
      */
-    public static void bagStatusReport(LinkBag<String> myBag) {
+    public static void bagStatusReport(ArrayBag<String> myBag) {
        /* System.out.println("Bag contents: " + myBag);
         */
         myBag.display();
