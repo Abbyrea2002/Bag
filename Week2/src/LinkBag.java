@@ -1,5 +1,3 @@
-import org.w3c.dom.Node;
-
 /**
  * Created by abbyr on 08/10/2024
  * COMMENTS ABOUT PROGRAM HERE
@@ -8,6 +6,8 @@ public final class LinkBag<T>
 {
    private MyNode<T> firstnode;
    private int numberOfEntries;
+
+
 
    private MyNode<T> findEntry(T anEntry){
       MyNode<T> currentNode = firstnode;
@@ -135,6 +135,7 @@ public final class LinkBag<T>
 
    public void display(){
       displayChain(firstnode);
+
    }
 
    public void displayChain(MyNode nodeOne){
@@ -142,6 +143,20 @@ public final class LinkBag<T>
          System.out.println(nodeOne.getData());
          displayChain(nodeOne.getNext());
       }
+   }
+
+   public MyNode<T> getElementAt(int index){
+      int count = 0;
+      MyNode<T> currentNode = firstnode;
+
+      while(currentNode != null){
+         if(count == index){
+            return (MyNode<T>) currentNode.getData();
+         }
+            count++;
+         currentNode = currentNode.getNext();
+      }
+      return null;
    }
 
    public String toString(){
@@ -153,6 +168,24 @@ public final class LinkBag<T>
       }
       result += "]";
       return result;
+   }
+
+
+
+   public static long measureAddTime(LinkBag<Integer> bag, int value){
+      long startTime, endTime;
+      startTime = System.nanoTime();
+      bag.addNewEntry(value);
+      endTime = System.nanoTime();
+      return(endTime - startTime);
+   }
+
+   public static long measureRemoveTime(LinkBag<Integer> bag){
+      long startTime, endTime;
+      startTime = System.nanoTime();
+      bag.remove();
+      endTime = System.nanoTime();
+      return(endTime - startTime);
    }
 
 }//class
